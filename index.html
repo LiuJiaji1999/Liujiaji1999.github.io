@@ -47,34 +47,17 @@
       page-break-inside: avoid;
     }
 
-    
-    @media print {
+    /* 仅网页版生效：让页面内容居中显示，不影响另存为 PDF */
+    @media screen {
       body {
         margin: 0;
-        padding: 0;
+        padding: 18px 0;
       }
 
-      h1, h2, h3 {
-        page-break-after: avoid;
-        break-after: avoid;
-      }
-
-      h2 {
-        margin-top: 8px;
-      }
-
-      h3 {
-        margin-top: 6px;
-      }
-
-      ul {
-        margin-top: 2px;
-        margin-bottom: 6px;
-      }
-
-      p {
-        margin-top: 0;
-        margin-bottom: 2px;
+      #layout-content {
+        width: 190mm;
+        max-width: calc(100% - 24px);
+        margin: 0 auto;
       }
     }
   </style>
