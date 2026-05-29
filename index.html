@@ -47,7 +47,19 @@
       page-break-inside: avoid;
     }
 
-    
+    /* 仅网页版生效：让页面内容居中显示，不影响另存为 PDF */
+    @media screen {
+      body {
+        margin: 0;
+        padding: 18px 0;
+      }
+
+      #layout-content {
+        width: 190mm;
+        max-width: calc(100% - 24px);
+        margin: 0 auto;
+      }
+    }
   </style>
 </head>
 
