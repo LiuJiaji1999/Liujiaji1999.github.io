@@ -7,86 +7,15 @@
   <link rel="stylesheet" href="jemdoc.css" type="text/css" />
   <title>Jiaji Liu</title>
   <style>
-    /*
-      A4 print layout for resume.
-      Only layout/spacing/size rules are adjusted here.
-      No text color, link color, heading color, or border color is redefined,
-      so the original colors from jemdoc.css and inline styles are preserved.
-    */
-
     @page {
       size: A4;
-      margin: 8mm 9mm;
+      /* 上 右 下 左 */
+      margin: 12mm 9mm 10mm 9mm;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      font-size: 10pt;
-      line-height: 1.28;
-    }
-
-    #layout-content {
-      width: 190mm;
-      max-width: 190mm;
-      margin: 0 auto;
-      padding: 0;
-    }
-
-    #toptitle {
-      margin: 0 0 2.5mm 0;
-      padding: 0 0 1.5mm 0;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 20pt;
-      line-height: 1.12;
-    }
-
-    h2 {
-      margin: 4.2mm 0 1.5mm 0;
-      padding-top: 0.8mm;
-      font-size: 12pt;
-      line-height: 1.15;
-      page-break-after: avoid;
-      break-after: avoid;
-    }
-
-    h3 {
-      margin: 2.2mm 0 1mm 0;
-      font-size: 10.5pt;
-      line-height: 1.15;
-      page-break-after: avoid;
-      break-after: avoid;
-    }
-
-    p {
-      margin: 0 0 0.9mm 0;
-      line-height: 1.28;
-    }
-
-    ul {
-      margin: 0.6mm 0 1.6mm 4.5mm;
-      padding-left: 4.6mm;
-    }
-
-    li {
-      margin: 0 0 0.85mm 0;
-      padding-left: 0;
-    }
-
-    li p {
-      margin: 0 0 0.85mm 0;
     }
 
     .container {
@@ -94,56 +23,17 @@
       justify-content: space-between;
     }
 
-    .imgtable {
-      width: 100%;
-      margin: 0 0 2mm 0;
-      border-collapse: collapse;
-      table-layout: fixed;
-      page-break-inside: avoid;
-      break-inside: avoid;
-    }
-
-    .imgtable td {
-      padding: 0;
-      vertical-align: middle;
-    }
-
-    .imgtable td:first-child {
-      width: 31mm;
-      padding-right: 5mm;
-      white-space: nowrap;
-    }
-
     .imgtable img {
-      display: block;
-      width: 30mm !important;
-      max-width: 30mm;
-      height: auto;
       align-self: center;
-      object-fit: cover;
-      font-size: 0;
     }
 
-    .imgtable td[align="left"] p,
-    .basic-info {
+    li {
+      margin: 0 0 2px 0;
+      padding-left: 0;
+    }
+
+    li p {
       margin: 0;
-      line-height: 1.36 !important;
-    }
-
-    span[style*="font-size: 1.05em"] {
-      font-size: 1em !important;
-    }
-
-    span[style*="font-size: 0.9em"] {
-      line-height: 1.23;
-    }
-
-    i {
-      line-height: 1.22;
-    }
-
-    a {
-      text-decoration: none;
     }
 
     /* The two award lists are long; two columns save vertical space on A4. */
@@ -157,110 +47,38 @@
       page-break-inside: avoid;
     }
 
-    @media screen {
-      body {
-        padding: 8mm 0;
-      }
-
-      #layout-content {
-        padding: 0 3mm;
-      }
-    }
-
     @media print {
       body {
-        font-size: 9.3pt;
-        line-height: 1.22;
-      }
-
-      #layout-content {
-        width: auto;
-        max-width: none;
         margin: 0;
         padding: 0;
       }
 
-      #toptitle {
-        margin-bottom: 1.8mm;
-        padding-bottom: 1mm;
-      }
-
-      h1 {
-        font-size: 18pt;
-      }
-
-      h2 {
-        margin-top: 3.2mm;
-        margin-bottom: 1.1mm;
-        padding-top: 0.5mm;
-        font-size: 11.3pt;
-      }
-
-      h3 {
-        margin-top: 1.8mm;
-        margin-bottom: 0.8mm;
-        font-size: 9.8pt;
-      }
-
-      ul {
-        margin-top: 0.35mm;
-        margin-bottom: 1.1mm;
-        padding-left: 4.1mm;
-      }
-
-      li {
-        margin-bottom: 0.5mm;
-      }
-
-      p,
-      li p {
-        margin-top: 0;
-        margin-bottom: 0.5mm;
-        line-height: 1.22;
-      }
-
-      .imgtable {
-        margin-bottom: 1.4mm;
-      }
-
-      .imgtable td:first-child {
-        width: 27mm;
-        padding-right: 4mm;
-      }
-
-      .imgtable img {
-        width: 25mm !important;
-        max-width: 25mm;
-      }
-
-      .imgtable td[align="left"] p,
-      .basic-info {
-        line-height: 1.25 !important;
-      }
-
-      span[style*="font-size: 0.9em"] {
-        line-height: 1.18;
-      }
-
-      h2,
-      h3,
-      #toptitle,
-      .imgtable {
+      h1, h2, h3 {
         page-break-after: avoid;
         break-after: avoid;
       }
 
-      li {
-        break-inside: auto;
-        page-break-inside: auto;
+      h2 {
+        margin-top: 8px;
       }
 
-      a::after {
-        content: "" !important;
+      h3 {
+        margin-top: 6px;
+      }
+
+      ul {
+        margin-top: 2px;
+        margin-bottom: 6px;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 2px;
       }
     }
   </style>
 </head>
+
 
 <body>
   <div id="layout-content">
@@ -272,13 +90,12 @@
         <td><a href="https://liujiaji1999.github.io/"><img src="JiajiLiu.png" alt="alt text" width="140px" /></a>&nbsp;
         </td>
         <td align="left">
-          <p class="basic-info">博士生三年级（在读）<br />
+          <p style="line-height: 1.8;">博士生三年级（在读）<br />
             华北电力大学 控制与计算机工程学院, 北京 102206 <br />
-            邮箱: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cda1a4b8a7a4aca7a4bfaca38dfcfbfee3aea2a0">[email&#160;protected]</a> <br />
+            邮箱: liujiajiran@163.com <br />
             联系方式: 155-1306-3877 <br />
             民族: 汉族 <br />
-            政治面貌: 中共党员
-          </p>
+            政治面貌: 中共党员 <br />
         </td>
 
       </tr>
@@ -298,7 +115,7 @@
         <p><b>现研究方向:</b>&nbsp;&nbsp;目标检测, &nbsp;&nbsp;迁移学习
       <li>
         <p><b>证书:</b>
-          &nbsp;软件设计师,&nbsp;&nbsp;CET-6,&nbsp;&nbsp;计算机二&amp;三&amp;四级,&nbsp;&nbsp;ACCA初级认证,&nbsp;&nbsp;CODA初级认证.
+          &nbsp;软件设计师,&nbsp;&nbsp;CET-6,&nbsp;&nbsp;计算机二&三&四级,&nbsp;&nbsp;ACCA初级认证,&nbsp;&nbsp;CODA初级认证.
     </ul>
 
 
@@ -338,7 +155,7 @@
         <p><span style="font-size: 1.05em; color: #5a9bd5;">YOLO-DTAD: Dynamic Task Alignment
             Detection Model for Multi-Category Power Defects Image</span>
           <br />
-          Runhai Jiao,<b>Jiaji Liu</b>, Kaihang Li, Ruojiao Qiao, Yanzhi Liu, Wenbiao Zhang*<br />
+          Runhai Jiao, <b>Jiaji Liu</b>, Kaihang Li, Ruojiao Qiao, Yanzhi Liu, Wenbiao Zhang*<br />
           <i> IEEE Transactions on Instrumentation & Measurement, 2025, 74: 1-14. 
             <!-- <a href="https://doi.org/10.1109/TIM.2025.3541692">[Paper]</a> -->
             <!-- <a href="https://github.com/LiuJiaji1999/yolo-dtad" target="_blank">[Code]</a> -->
@@ -640,8 +457,5 @@
         <p>具备较强的学习能力，能够快速熟悉业务流程并按要求完成相关工作任务。</p>
       </li>
     </ul>
-  </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"7939e04a4baf43c8b86a560f74aac60e","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"45c2bf8136a245cd97f1c2e9a96c0730","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
-</html>
+    
+    </ul>
