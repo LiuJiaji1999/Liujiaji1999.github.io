@@ -6,16 +6,39 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <link rel="stylesheet" href="jemdoc.css" type="text/css" />
   <title>Jiaji Liu</title>
-  <!-- <style>
+  <style>
     @page {
       size: A4;
       /* 上 右 下 左 */
       margin: 12mm 9mm 10mm 9mm;
     }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
+    }
+
+    /* 重点：修正数字歪歪扭扭的问题 */
+    body {
+      font-family: "Times New Roman", "SimSun", "Songti SC", "Noto Serif CJK SC", serif;
+      font-variant-numeric: normal;
+      font-feature-settings: normal;
+    }
+
+    p,
+    li,
+    td,
+    th,
+    h1,
+    h2,
+    h3,
+    h4,
+    b,
+    strong,
+    i,
+    em {
+      font-family: "Times New Roman", "SimSun", "Songti SC", "Noto Serif CJK SC", serif;
     }
 
     .container {
@@ -36,18 +59,52 @@
       margin: 0;
     }
 
-    /* The two award lists are long; two columns save vertical space on A4. */
-    h3 + ul {
+    h3+ul {
       columns: 2;
       column-gap: 9mm;
     }
 
-    h3 + ul li {
+    h3+ul li {
       break-inside: avoid;
       page-break-inside: avoid;
     }
 
-    /* 仅网页版生效：让页面内容居中显示，不影响另存为 PDF */
+    .edu-list {
+      margin-top: 0;
+    }
+
+    .edu-row {
+      display: grid;
+      grid-template-columns: 42mm 34mm 1fr 24mm;
+      column-gap: 3mm;
+      align-items: baseline;
+      margin: 0;
+    }
+
+    .edu-time,
+    .edu-school,
+    .edu-major,
+    .edu-gpa {
+      white-space: nowrap;
+    }
+
+    .edu-gpa {
+      text-align: left;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 25mm 1fr;
+      column-gap: 2mm;
+      align-items: baseline;
+      margin: 0;
+    }
+
+    .info-label {
+      white-space: nowrap;
+    }
+
+
     @media screen {
       body {
         margin: 0;
@@ -60,73 +117,7 @@
         margin: 0 auto;
       }
     }
-  </style> -->
-
-  <style>
-  @page {
-    size: A4;
-    /* 上 右 下 左 */
-    margin: 12mm 9mm 10mm 9mm;
-  }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-
-  /* 重点：修正数字歪歪扭扭的问题 */
-  body {
-    font-family: "Times New Roman", "SimSun", "Songti SC", "Noto Serif CJK SC", serif;
-    font-variant-numeric: normal;
-    font-feature-settings: normal;
-  }
-
-  p, li, td, th, h1, h2, h3, h4,
-  b, strong, i, em {
-    font-family: "Times New Roman", "SimSun", "Songti SC", "Noto Serif CJK SC", serif;
-  }
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .imgtable img {
-    align-self: center;
-  }
-
-  li {
-    margin: 0 0 2px 0;
-    padding-left: 0;
-  }
-
-  li p {
-    margin: 0;
-  }
-
-  h3 + ul {
-    columns: 2;
-    column-gap: 9mm;
-  }
-
-  h3 + ul li {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  @media screen {
-    body {
-      margin: 0;
-      padding: 18px 0;
-    }
-
-    #layout-content {
-      width: 190mm;
-      max-width: calc(100% - 24px);
-      margin: 0 auto;
-    }
-  }
-</style>
+  </style>
 
 </head>
 
@@ -155,18 +146,59 @@
 
     <h2>教育背景</h2>
 
-    <ul>
+    <!-- <ul>
       <li>
-        <p>2023年09月 至今&nbsp;&nbsp;华北电力大学&nbsp;&nbsp;人工智能
+        <p>2023年09月至今，&nbsp;华北电力大学，&nbsp;人工智能
       <li>
-        <p>2020年09月-2023年07月&nbsp;&nbsp;太原师范学院&nbsp;&nbsp;计算机技术/智能数据分析与应用&nbsp;&nbsp;<b>GPA:3.93</b>
+        <p>2020年09月-2023年07月，&nbsp;太原师范学院，&nbsp;计算机技术/智能数据分析与应用，&nbsp;<b>GPA:3.93</b>
       <li>
-       <p>2016年09月-2020年07月&nbsp;&nbsp;中北大学&nbsp;&nbsp;软件工程/云计算与大数据分析&nbsp;&nbsp;<b>GPA:3.86</b>
+       <p>2016年09月-2020年07月，&nbsp;中北大学，&nbsp;软件工程/云计算与大数据分析，&nbsp;<b>GPA:3.86</b>
       <li>
-        <p><b>现研究方向:</b>无人机巡检，&nbsp;&nbsp;目标检测， &nbsp;&nbsp;迁移学习
+        <p><b>现研究方向:</b>无人机巡检，&nbsp;目标检测，&nbsp;迁移学习
       <li>
-        <p><b>证书:</b>
-          &nbsp;软件设计师，&nbsp;&nbsp;CET-6，&nbsp;&nbsp;计算机二&三&四级，&nbsp;&nbsp;ACCA初级认证，&nbsp;&nbsp;CODA初级认证
+        <p><b>证书:</b>软件设计师，&nbsp;CET-6，&nbsp;计算机二&三&四级，&nbsp;ACCA初级认证，&nbsp;CODA初级认证
+    </ul> -->
+    <ul class="edu-list">
+      <li>
+        <p class="edu-row">
+          <span class="edu-time">2023年09月至今</span>
+          <span class="edu-school">华北电力大学</span>
+          <span class="edu-major">人工智能</span>
+          <span class="edu-gpa"></span>
+        </p>
+      </li>
+
+      <li>
+        <p class="edu-row">
+          <span class="edu-time">2020年09月-2023年07月</span>
+          <span class="edu-school">太原师范学院</span>
+          <span class="edu-major">计算机技术/智能数据分析与应用</span>
+          <span class="edu-gpa"><b>GPA: 3.93</b></span>
+        </p>
+      </li>
+
+      <li>
+        <p class="edu-row">
+          <span class="edu-time">2016年09月-2020年07月</span>
+          <span class="edu-school">中北大学</span>
+          <span class="edu-major">软件工程/云计算与大数据分析</span>
+          <span class="edu-gpa"><b>GPA: 3.86</b></span>
+        </p>
+      </li>
+
+      <li>
+        <p class="info-row">
+          <span class="info-label"><b>现研究方向:</b></span>
+          <span>无人机巡检，目标检测，迁移学习</span>
+        </p>
+      </li>
+
+      <li>
+        <p class="info-row">
+          <span class="info-label"><b>证书:</b></span>
+          <span>软件设计师，CET-6，计算机二&三&四级，ACCA初级认证，CODA初级认证</span>
+        </p>
+      </li>
     </ul>
 
 
@@ -175,8 +207,8 @@
 
     <ul>
       <li>
-        <p><span style="font-size: 1.05em; color: #5a9bd5;">Hierarchical Feature Difference-guided 
-          Network for domain adaptation object detection</span>
+        <p><span style="font-size: 1.05em; color: #5a9bd5;">Hierarchical Feature Difference-guided
+            Network for domain adaptation object detection</span>
           <br />
           <b>Jiaji Liu</b>, Runhai Jiao*, Xinxin Li, Yutong Su<br />
           <i> Journal of Visual Communication and Image Representation, 2026: XXXX. (CCF-C)
@@ -189,8 +221,8 @@
 
     <ul>
       <li>
-        <p><span style="font-size: 1.05em; color: #5a9bd5;">A multi-view feature collaborative 
-          optimization method for object detection</span>
+        <p><span style="font-size: 1.05em; color: #5a9bd5;">A multi-view feature collaborative
+            optimization method for object detection</span>
           <br />
           <b>Jiaji Liu</b>, Runhai Jiao*, Xiangning Zhan, Kaihang Li<br />
           <i> Image and Vision Computing, 2026: 106023.(CCF-C)
@@ -207,7 +239,7 @@
             Detection Model for Multi-Category Power Defects Image</span>
           <br />
           Runhai Jiao, <b>Jiaji Liu</b>, Kaihang Li, Ruojiao Qiao, Yanzhi Liu, Wenbiao Zhang*<br />
-          <i> IEEE Transactions on Instrumentation & Measurement, 2025, 74: 1-14. 
+          <i> IEEE Transactions on Instrumentation & Measurement, 2025, 74: 1-14.
             <!-- <a href="https://doi.org/10.1109/TIM.2025.3541692">[Paper]</a> -->
             <!-- <a href="https://github.com/LiuJiaji1999/yolo-dtad" target="_blank">[Code]</a> -->
           </i>
@@ -274,7 +306,7 @@
         </p>
       </li>
     </ul>
-    
+
     <h2>发明专利</h2>
     <ul>
       <li>
@@ -361,11 +393,11 @@
           <span style="font-size: 0.9em; color: gray;">负责项目统筹、团队协调和具身智能算法学习，主要基于成熟机器人平台进行二次开发，
             研究并应用传统SLAM、多源感知、多模态识别、VLA、VLN等技术完成项目目标，形成论文、专利和软著。</span>
         </p>
-      
+
       <li>
         <p>
           <a href="research/立项-结项.pdf" target="_blank">
-          主持</a>，&nbsp;基于微表情识别的教学质量评估 (2021Y719)，
+            主持</a>，&nbsp;基于微表情识别的教学质量评估 (2021Y719)，
           &nbsp;2021年度山西省级研究生教育创新项目，&nbsp;2021年05月-2022年06月<br />
           <span style="font-size: 0.9em; color: gray;">该项目基于深度学习进行微表情识别，重构基于Deep CNN和Improved
             FlowNet2的双网络模型，预测分析视频流的受试者微表情，提高教学质量评估效率，形成论文、专利和软著。</span>
@@ -514,5 +546,5 @@
         <p>具备较强的学习能力，能够快速熟悉业务流程并按要求完成相关工作任务。</p>
       </li>
     </ul>
-    
+
     </ul>
