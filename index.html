@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <link rel="stylesheet" href="jemdoc.css" type="text/css" />
   <title>Jiaji Liu</title>
-  <style>
+  <!-- <style>
     @page {
       size: A4;
       /* 上 右 下 左 */
@@ -60,7 +60,74 @@
         margin: 0 auto;
       }
     }
-  </style>
+  </style> -->
+
+  <style>
+  @page {
+    size: A4;
+    /* 上 右 下 左 */
+    margin: 12mm 9mm 10mm 9mm;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 重点：修正数字歪歪扭扭的问题 */
+  body {
+    font-family: "Times New Roman", "SimSun", "Songti SC", "Noto Serif CJK SC", serif;
+    font-variant-numeric: normal;
+    font-feature-settings: normal;
+  }
+
+  p, li, td, th, h1, h2, h3, h4,
+  b, strong, i, em {
+    font-family: "Times New Roman", "SimSun", "Songti SC", "Noto Serif CJK SC", serif;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .imgtable img {
+    align-self: center;
+  }
+
+  li {
+    margin: 0 0 2px 0;
+    padding-left: 0;
+  }
+
+  li p {
+    margin: 0;
+  }
+
+  h3 + ul {
+    columns: 2;
+    column-gap: 9mm;
+  }
+
+  h3 + ul li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  @media screen {
+    body {
+      margin: 0;
+      padding: 18px 0;
+    }
+
+    #layout-content {
+      width: 190mm;
+      max-width: calc(100% - 24px);
+      margin: 0 auto;
+    }
+  }
+</style>
+
 </head>
 
 
